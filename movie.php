@@ -40,7 +40,7 @@ $up_film = new Movie('Up', 'Pete Docter', 'Cartoon', 4, 'https://picsum.photos/2
 //create a new variable that take the value of the function
 $spiderman_film->getFilmRaputation();
 
-$up_film->getFilmRaputation();
+$avatar_film->getFilmRaputation();
 
 $up_film->getFilmRaputation();
 
