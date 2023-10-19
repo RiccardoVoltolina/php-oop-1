@@ -40,6 +40,7 @@ include __DIR__ . '/movie.php';
     <!-- <h5><?= $movieArray[1]->name; ?></h5>  print without foreach-->
     <div class="d-flex m-3">
         <div class="row">
+            <!-- use foreach to take all single movie value from array -->
             <?php foreach ($movieArray as $movie) :  ?>
                 <div class="col">
 

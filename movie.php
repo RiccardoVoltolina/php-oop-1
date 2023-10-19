@@ -1,4 +1,6 @@
 <?php
+
+//create class with all limits
 class Movie
 {
     public $name;
@@ -8,6 +10,7 @@ class Movie
     public $valutation;
     public $movieImage;
 
+    //create a construct for the future parameters
     function __construct($name, $author, $filmGenre, $valutation, $movieImage)
     {
         $this->name = $name;
@@ -16,6 +19,8 @@ class Movie
         $this->valutation = $valutation;
         $this->movieImage = $movieImage;
     }
+
+    //create a function that say if the movie is god or not
     public function getFilmRaputation()
     {
         if ($this->valutation < 3) {
@@ -26,8 +31,14 @@ class Movie
     }
 }
 
+//create a new variable for all films and give to them the construct value
+$spiderman_film = new Movie('Spiderman', 'Stan Lee', 'Action', 5, 'https://picsum.photos/200/300');
 $avatar_film = new Movie('Avatar', 'James Cameron', 'Action', 2, 'https://picsum.photos/200/300');
 $up_film = new Movie('Up', 'Pete Docter', 'Cartoon', 4, 'https://picsum.photos/200/300');
+
+//create a new variable that take the value of the function
+$spiderman_film->getFilmRaputation();
+$valutation_spiderman_film = $spiderman_film->getFilmRaputation();
 
 $up_film->getFilmRaputation();
 $valutation_up_film = $up_film->getFilmRaputation();
@@ -35,7 +46,7 @@ $valutation_up_film = $up_film->getFilmRaputation();
 $up_film->getFilmRaputation();
 $valutation_avatar_film = $avatar_film->getFilmRaputation();
 
-$movieArray = array($avatar_film, $up_film);
+$movieArray = array($avatar_film, $up_film, $spiderman_film);
 
 
 
