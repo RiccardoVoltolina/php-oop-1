@@ -12,7 +12,11 @@ organizzando il layout dividendo la struttura ed i contenuti in file e parziali 
 
 
 <?php
-
+class Movie {
+    public $name;
+    public $author;
+    public $valutation;
+}
 
 
 ?>
