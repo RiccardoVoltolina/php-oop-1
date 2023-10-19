@@ -44,13 +44,16 @@ include __DIR__ . '/movie.php';
             <?php foreach ($movieArray as $movie) :  ?>
                 <div class="col">
 
-                    <div class="card">
+                    <div class="card text-center p-3 bg-black text-white">
                         <h1><?php echo $movie->name ?></h1>
-                        <img src="<?= $movie->movieImage ?>">
+                        <div class="pb-2">
+                            <img src="<?= $movie->movieImage ?>">
+                        </div>
                         <div>Autore: <?php echo $movie->author ?></div>
                         <div>Genere: <?php echo $movie->filmGenre ?></div>
-                        <div>Valutazione media: <?php echo $movie->valutation ?></div>
-                        <h5>E' piaciuto? <?php echo $movie->valutationRateo ?></h5>
+                        <div class="pb-2">Valutazione media: <?php echo $movie->valutation ?></div>
+                        <h5>E' piaciuto?</h5>
+                        <div><?php echo $movie->valutationRateo ?></div>
                     </div>
                 </div>
             <?php endforeach; ?>
