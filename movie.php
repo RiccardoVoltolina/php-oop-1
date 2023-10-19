@@ -46,6 +46,7 @@ $valutation_up_film = $up_film->getFilmRaputation();
 $up_film->getFilmRaputation();
 $valutation_avatar_film = $avatar_film->getFilmRaputation();
 
+//put all films inside a new array
 $movieArray = array($avatar_film, $up_film, $spiderman_film);
 
 
