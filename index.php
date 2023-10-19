@@ -17,14 +17,17 @@ class Movie {
     public $author;
     public $valutationRateo;
     public $filmGenre;
+    public $valutation;
 
-function __construct($name, $author, $filmGenre) {
+function __construct($name, $author, $filmGenre, $valutation) {
     $this->name = $name;
     $this->author = $author;
     $this->filmGenre = $filmGenre;
+    $this->valutation = $valutation;
+
 }
-public function setFilmRaputation($valutation) {
-    if ($valutation < 3) {
+public function getFilmRaputation() {
+    if ($this->valutation < 3) {
         $this->valutationRateo = 'Questo film non è piaciuto agli utenti';
     } else {
         $this->valutationRateo = 'Questo film è piaciuto agli utenti';
@@ -37,16 +40,16 @@ public function setFilmRaputation($valutation) {
 
 }
 
-$avatar_film = new Movie('Avatar', 'James Cameron', 'Action');
-$up_film = new Movie('Up', 'Pete Docter', 'Cartoon');
+$avatar_film = new Movie('Avatar', 'James Cameron', 'Action', 3);
+$up_film = new Movie('Up', 'Pete Docter', 'Cartoon', 4);
 var_dump($avatar_film);
 
-$up_film->setFilmRaputation(2);
-$valutation_up_film = $up_film->setFilmRaputation(2);
+$up_film->getFilmRaputation();
+$valutation_up_film = $up_film->getFilmRaputation();
 var_dump($up_film);
 
-$up_film->setFilmRaputation(5);
-$valutation_avatar_film = $avatar_film->setFilmRaputation(5);
+$up_film->getFilmRaputation();
+$valutation_avatar_film = $avatar_film->getFilmRaputation();
 var_dump($avatar_film);
 
 $movieArray = array($avatar_film,$up_film);
@@ -71,6 +74,11 @@ var_dump($movieArray);
     <title>php oop</title>
 </head>
 <body>
-   <h1><?php echo $movieArray?></h1>
+    <h5><?= $movieArray[1]->name; ?></h5>
+    <?php foreach($movieArray as $movie):  ?>
+        <div>
+            <h1><?php echo $movie->name ?></h1>
+        </div>
+    <?php endforeach; ?>
 </body>
 </html>
