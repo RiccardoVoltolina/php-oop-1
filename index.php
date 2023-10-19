@@ -18,6 +18,12 @@ class Movie {
     public $valutation;
 }
 
+$avatar = new Movie();
+$up = new Movie();
+
+$avatar -> name = 'avatar';
+var_dump($avatar);
+
 
 ?>
 
