@@ -69,6 +69,11 @@ $movieArray = array($avatar_film, $up_film);
     <title>php oop</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <style>
+
+        .card {
+            width: fit-content;
+            height: 100%;
+        }
         img {
             height: 300px;
             width: 200px;
@@ -78,16 +83,24 @@ $movieArray = array($avatar_film, $up_film);
 
 <body>
     <!-- <h5><?= $movieArray[1]->name; ?></h5>  print without foreach-->
-    <?php foreach ($movieArray as $movie) :  ?>
-        <div class="card">
-            <h1><?php echo $movie->name ?></h1>
-            <img src="<?= $movie->movieImage ?>">
-            <div><?php echo $movie->author ?></div>
-            <div><?php echo $movie->filmGenre ?></div>
-            <div><?php echo $movie->valutation ?></div>
+    <div class="d-flex m-3">
+        <div class="row">
+            <?php foreach ($movieArray as $movie) :  ?>
+                <div class="col">
+
+                    <div class="card">
+                        <h1><?php echo $movie->name ?></h1>
+                        <img src="<?= $movie->movieImage ?>">
+                        <div>Autore: <?php echo $movie->author ?></div>
+                        <div>Genere: <?php echo $movie->filmGenre ?></div>
+                        <div>Valutazione media: <?php echo $movie->valutation ?></div>
+                        <h5>E' piaciuto? <?php echo $movie->valutationRateo ?></h5>
+                    </div>
+                </div>
+            <?php endforeach; ?>
         </div>
-        <h5><?php echo $movie->valutationRateo ?></h5>
-    <?php endforeach; ?>
+
+    </div>
 </body>
 
 </html>
