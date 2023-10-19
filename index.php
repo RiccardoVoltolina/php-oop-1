@@ -16,10 +16,12 @@ class Movie {
     public $name;
     public $author;
     public $valutationRateo;
+    public $filmGenre;
 
-function __construct($name, $author) {
+function __construct($name, $author, $filmGenre) {
     $this->name = $name;
     $this->author = $author;
+    $this->filmGenre = $filmGenre;
 }
 public function setFilmRaputation($valutation) {
     if ($valutation < 3) {
@@ -27,20 +29,32 @@ public function setFilmRaputation($valutation) {
     } else {
         $this->valutationRateo = 'Questo film è piaciuto agli utenti';
     }
-}
-
-
-
 
 }
 
-$avatar = new Movie(5, 'avatar', 'Riky');
-$up = new Movie(2, 'up', 'gigi');
-var_dump($avatar);
 
-$up->setFilmRaputation(3);
-$valutation_up = $up->setFilmRaputation(3);
-var_dump($up);
+
+
+}
+
+$avatar_film = new Movie('Avatar', 'James Cameron', 'Action');
+$up_film = new Movie('Up', 'Pete Docter', 'Cartoon');
+var_dump($avatar_film);
+
+$up_film->setFilmRaputation(2);
+$valutation_up_film = $up_film->setFilmRaputation(2);
+var_dump($up_film);
+
+$up_film->setFilmRaputation(5);
+$valutation_avatar_film = $avatar_film->setFilmRaputation(5);
+var_dump($avatar_film);
+
+$movieArray = [
+    $avatar_film,
+    $up_film,
+];
+
+var_dump($movieArray);
 
 
 ?>
