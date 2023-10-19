@@ -1,6 +1,6 @@
 <?php
 
-//create class with all limits
+//create class with all attributs
 class Movie
 {
     public $name;
@@ -29,6 +29,7 @@ class Movie
             $this->valutationRateo = 'Questo film è piaciuto agli utenti';
         }
     }
+ 
 }
 
 //create a new variable for all films and give to them the construct value
@@ -38,16 +39,14 @@ $up_film = new Movie('Up', 'Pete Docter', 'Cartoon', 4, 'https://picsum.photos/2
 
 //create a new variable that take the value of the function
 $spiderman_film->getFilmRaputation();
-$valutation_spiderman_film = $spiderman_film->getFilmRaputation();
 
 $up_film->getFilmRaputation();
-$valutation_up_film = $up_film->getFilmRaputation();
 
 $up_film->getFilmRaputation();
-$valutation_avatar_film = $avatar_film->getFilmRaputation();
 
 //put all films inside a new array
 $movieArray = array($avatar_film, $up_film, $spiderman_film);
+
 
 
 
