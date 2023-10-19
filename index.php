@@ -49,12 +49,16 @@ $up_film->setFilmRaputation(5);
 $valutation_avatar_film = $avatar_film->setFilmRaputation(5);
 var_dump($avatar_film);
 
-$movieArray = [
-    $avatar_film,
-    $up_film,
-];
+$movieArray = array($avatar_film,$up_film);
+
 
 var_dump($movieArray);
+
+
+
+
+
+
 
 
 ?>
@@ -67,5 +71,6 @@ var_dump($movieArray);
     <title>php oop</title>
 </head>
 <body>
+   <h1><?php echo $movieArray?></h1>
 </body>
 </html>
