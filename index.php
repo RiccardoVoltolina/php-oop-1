@@ -16,21 +16,38 @@ class Movie {
     public $name;
     public $author;
     public $valutation;
-
+    public $valutationRateo;
 
 function __construct($valutation, $name, $author) {
     $this->valutation = $valutation;
     $this->name = $name;
     $this->author = $author;
+
+
 }
+public function setFilmRaputation($valutation) {
+    if ($valutation < 3) {
+        $this->valutationRateo = 'Questo film non è piaciuto agli utenti';
+    } else {
+        $this->valutationRateo = 'Questo film è piaciuto agli utenti';
+    }
+}
+
+
 
 
 }
 
 $avatar = new Movie(5, 'avatar', 'Riky');
 $up = new Movie(2, 'up', 'gigi');
-var_dump($up);
-var_dump($avatar)
+var_dump($avatar);
+if (isset($valutation)) {
+
+    $up->setFilmRaputation($valutation);
+    $valutation_up = $up->setFilmRaputation($valutation);
+    var_dump($up);
+}
+
 
 ?>
 
