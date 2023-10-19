@@ -16,14 +16,21 @@ class Movie {
     public $name;
     public $author;
     public $valutation;
+
+
+function __construct($valutation, $name, $author) {
+    $this->valutation = $valutation;
+    $this->name = $name;
+    $this->author = $author;
 }
 
-$avatar = new Movie();
-$up = new Movie();
 
-$avatar -> name = 'avatar';
-var_dump($avatar);
+}
 
+$avatar = new Movie(5, 'avatar', 'Riky');
+$up = new Movie(2, 'up', 'gigi');
+var_dump($up);
+var_dump($avatar)
 
 ?>
 
