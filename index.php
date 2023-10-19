@@ -15,15 +15,11 @@ organizzando il layout dividendo la struttura ed i contenuti in file e parziali 
 class Movie {
     public $name;
     public $author;
-    public $valutation;
     public $valutationRateo;
 
-function __construct($valutation, $name, $author) {
-    $this->valutation = $valutation;
+function __construct($name, $author) {
     $this->name = $name;
     $this->author = $author;
-
-
 }
 public function setFilmRaputation($valutation) {
     if ($valutation < 3) {
@@ -41,12 +37,10 @@ public function setFilmRaputation($valutation) {
 $avatar = new Movie(5, 'avatar', 'Riky');
 $up = new Movie(2, 'up', 'gigi');
 var_dump($avatar);
-if (isset($valutation)) {
 
-    $up->setFilmRaputation($valutation);
-    $valutation_up = $up->setFilmRaputation($valutation);
-    var_dump($up);
-}
+$up->setFilmRaputation(3);
+$valutation_up = $up->setFilmRaputation(3);
+var_dump($up);
 
 
 ?>
